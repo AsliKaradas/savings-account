@@ -75,3 +75,13 @@ while count <= 3:
     print('Login Successful, CONTINUE\n')
     print(str.capitalize(users[n]), 'Welcome to your Savings Account!')
 
+    # Main menu
+
+    def display_balance():
+        """
+        This function will show the user's savings account balance.
+        """
+        global amounts
+        print()
+        print(str.capitalize(usernames[n]), 'You have ',
+                                            amounts[n], '$ on Your Account.\n')
