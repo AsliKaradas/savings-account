@@ -102,3 +102,18 @@ while count <= 3:
             print()
             print(f"{withdrawal_amount} Dollars successfully widthdrawn! ")
             print('Your Remaining Balance is', amounts[n], '$')
+
+    def cash_deposit(deposit_amount):
+        """
+        This function will process the deposit cash amount and
+        check if the deposit amount was less than 10€..
+        It will show a message that the deposit amount must be greater than 10$
+        """
+        global amounts
+    
+        if deposit_amount <= 10:
+            print('\n\n The Amount You Want to Deposit must be more than 10$')
+        else:
+            amounts[n] = amounts[n] + deposit_amount
+            print('\n\nYour new Balance is: ', amounts[n], ‚$‘)
+
