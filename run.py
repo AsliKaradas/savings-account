@@ -85,3 +85,20 @@ while count <= 3:
         print()
         print(str.capitalize(usernames[n]), 'You have ',
                                             amounts[n], '$ on Your Account.\n')
+
+    def cash_withdraw(withdrawal_amount):
+    """
+    This function will process the withdrawal cash amount
+    and check if the withdrawal amount was greater than the entered amount,
+    It will show a message that the entered amount is not valid.
+    """
+    global amounts
+
+    if withdrawal_amount > amounts[n]:
+        print('\nThe Amount is not AVAILABLE!')
+    else:
+        amounts[n] = amounts[n] - withdrawal_amount
+        print()
+        print()
+        print(f"{withdrawal_amount} Dollars successfully widthdrawn! ")
+        print('Your Remaining Balance is', amounts[n], '$')
