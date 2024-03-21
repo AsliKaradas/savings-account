@@ -1,3 +1,13 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+# imprt libraries
+import time
+
+print("\n\nPlease Insert Your Savings Account Card!\n\n")
+time.sleep(2)
+
+# Savings Account
+# while loop checks existance of the enterd username
+print("****************************************************************************")
+print("*                                                                          *")
+print("*                               SAVINGS ACCOUNT                            *")
+print("*                                                                          *")
+print("****************************************************************************")
