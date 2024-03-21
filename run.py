@@ -11,3 +11,9 @@ print("*                                                                        
 print("*                               SAVINGS ACCOUNT                            *")
 print("*                                                                          *")
 print("****************************************************************************")
+
+# Creating user's information for login
+usernames = ['savings1', 'savings2', 'savings3', 'savings4']
+passwords = ['0001', '0002', '0003', '0004']
+amounts = [10000, 20000, 30000, 4000]
+count = 0
