@@ -65,3 +65,13 @@ while count <= 3:
     else:
         print('\nPIN must Consists of 4 Digits.\n')
         count += 1
+
+    # If a user types an invalid password three times - exiting, or if valid - continuing.
+    if count == 3:
+        print('\n 3 failed PIN attempts. EXITING ....')
+        print('Your Savings Account Card has been Locked! \n')
+        exit()
+
+    print('Login Successful, CONTINUE\n')
+    print(str.capitalize(users[n]), 'Welcome to your Savings Account!')
+
