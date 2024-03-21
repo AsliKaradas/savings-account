@@ -13,9 +13,9 @@ print("*                                                                        
 print("****************************************************************************")
 
 # Creating user's information for login
-usernames = ['savings1', 'savings2', 'savings3', 'savings4']
+usernames = ['savings1', 'savings2', 'savings3']
 passwords = ['0001', '0002', '0003', '0004']
-amounts = [10000, 20000, 30000, 4000]
+amounts = [10000, 20000, 30000]
 count = 0
 
 # Checks users' information 
@@ -33,3 +33,35 @@ while True:
         break
     else:
         print('\n\n     Invalid Username!!')
+
+# While loops will confirm the passwords to verify the user's login
+while count <= 3:
+    pin = input('Please Enter Your PIN: ')
+
+    if pin.isdigit():
+        if user == 'savings1':
+            if pin == passwords[0]:
+                break
+            else:
+                count += 1
+                print('\n\n     Invalid PIN!!')
+                print()
+
+        if user == 'savings2':
+            if pin == passwords[1]:
+                break
+            else:
+                count += 1
+                print('\n\n     Invalid PIN!!')
+                print()
+
+        if user == 'savings3':
+            if pin == passwords[2]:
+                break
+            else:
+                count += 1
+                print('\n\n     Invalid PIN!!')
+                print()
+    else:
+        print('\nPIN must Consists of 4 Digits.\n')
+        count += 1
