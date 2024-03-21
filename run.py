@@ -117,3 +117,10 @@ while count <= 3:
             amounts[n] = amounts[n] + deposit_amount
             print('\n\nYour new Balance is: ', amounts[n], ‚$‘)
 
+    def exit_system():
+        """
+        This function will show a Goodbye message and exit the system.
+        """
+        goodbye_message = pyfiglet.figlet_format('Thank You, Bye!')
+        print(goodbye_message)
+        exit()
