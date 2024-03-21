@@ -1,6 +1,7 @@
 # imprt libraries
 import time
 import string
+import os
 
 print("\n\nPlease Insert Your Savings Account Card!\n\n")
 time.sleep(2)
@@ -73,6 +74,8 @@ while count <= 3:
         print('Your Savings Account Card has been Locked! \n')
         exit()
 
+    os.system('clear')
+    
     print('Login Successful, CONTINUE\n')
     print(str.capitalize(users[n]), 'Welcome to your Savings Account!')
 
