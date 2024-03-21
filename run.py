@@ -1,5 +1,6 @@
 # imprt libraries
 import time
+import string
 
 print("\n\nPlease Insert Your Savings Account Card!\n\n")
 time.sleep(2)
@@ -124,3 +125,44 @@ while count <= 3:
         goodbye_message = pyfiglet.figlet_format('Thank You, Bye!')
         print(goodbye_message)
         exit()
+
+    # The while loop will process the user's responses for transaction processing.
+    response = None
+    amount = None
+    
+    while True:
+    
+        try:
+            response = int(input("""
+                Select From Following Options:
+                1. Check Savings A/C Balance
+                2. Cash Withdraw
+                3. Cash Deposit
+                4. Exit
+                \nType the Number of Your Choices: """))
+    
+            if response == 1:
+                display_balance()
+    
+            elif response == 2:
+                try:
+                    amount = int(input("Enter Withdrawal Amount: "))
+                except ValueError:
+                    print("\n\nPlease Insert a valid Withdrawal Amount!\n\n")
+                else:
+                    cash_withdraw(amount)
+    
+            elif response == 3:
+                try:
+                    amount = int(input("Enter Deposit Amount: "))
+                except ValueError:
+                    print("\n\nPlease Insert a valid Deposit Amount!\n\n")
+                else:
+                    cash_deposit(amount)
+            elif response == 4:
+                exit_system()
+            else:
+                raise ValueError('\n\n     Response is not Valid!\n')
+    
+        except ValueError:
+            print('\n\n     Response is not Valid!\n')
