@@ -3,6 +3,7 @@ import time
 import string
 import os
 
+
 print("\n\nPlease Insert Your Savings Account Card!\n\n")
 time.sleep(2)
 
@@ -20,7 +21,9 @@ passwords = ['1223', '2222', '4444', '5555']
 amounts = [100, 2000, 30000, 400000]
 count = 0
 
-# Checks users' information 
+
+# Checks users' information
+
 while True:
     user = input('\nPlease Enter Your  Username: ')
     user = user.lower()
@@ -68,107 +71,111 @@ while count <= 3:
         print('\nPIN must Consists of 4 Digits.\n')
         count += 1
 
-    # If a user types an invalid password three times - exiting, or if valid - continuing.
+ # If a user types an invalid password three times - exiting, or if valid - continuing.
     if count == 3:
         print('\n 3 failed PIN attempts. EXITING ....')
-        print('Your Savings Account Card has been Locked! \n')
-        exit()
-
-    os.system('clear')
-    
-    print(str.capitalize(usernames[n]), ', Welcome to your Savings Account!')
-
-    # Main menu
-
-    def display_balance():
-        """
-        This function will show the user's savings account balance.
-        """
-        global amounts
         print()
-        print(str.capitalize(usernames[n]), 'You have ',
-                                            amounts[n], '$ on Your Account.\n')
-
-    def cash_withdraw(withdrawal_amount):
-        """
-        This function will process the withdrawal cash amount
-        and check if the withdrawal amount was greater than the entered amount,
-        It will show a message that the entered amount is not valid.
-        """
-        global amounts
-    
-        if withdrawal_amount > amounts[n]:
-            print('\nThe Amount is not AVAILABLE!')
-        else:
-            amounts[n] = amounts[n] - withdrawal_amount
-            print()
-            print()
-            print(f"{withdrawal_amount} Dollars successfully widthdrawn! ")
-            print('Your Remaining Balance is', amounts[n], '$')
-
-    def cash_deposit(deposit_amount):
-        """
-        This function will process the deposit cash amount and
-        check if the deposit amount was less than 10€..
-        It will show a message that the deposit amount must be greater than 10$
-        """
-        global amounts
-    
-        if deposit_amount <= 10:
-            print('\n\n The Amount You Want to Deposit must be more than 10$')
-        else:
-            amounts[n] = amounts[n] + deposit_amount
-            print('\n\nYour new Balance is: ', amounts[n], '$')
-
-    def exit_system():
-        """
-        This function will show a Goodbye message and exit the system.
-        """
-        print("****************************************************************************")
-        print("*                                                                          *")
-        print("*                               THANK YOU, BYE                             *")
-        print("*                                                                          *")
-        print("****************************************************************************")
-
         exit()
 
-    # The while loop will process the user's responses for transaction processing.
-    response = None
-    amount = None
-    
-    while True:
-    
-        try:
-            response = int(input("""
-                Select From Following Options:
-                1. Check Savings A/C Balance
-                2. Cash Withdraw
-                3. Cash Deposit
-                4. Exit
-                \nType the Number of Your Choices: """))
-    
-            if response == 1:
-                display_balance()
-    
-            elif response == 2:
-                try:
-                    amount = int(input("Enter Withdrawal Amount: "))
-                except ValueError:
-                    print("\n\nPlease Insert a valid Withdrawal Amount!\n\n")
-                else:
-                    cash_withdraw(amount)
-    
-            elif response == 3:
-                try:
-                    amount = int(input("Enter Deposit Amount: "))
-                except ValueError:
-                    print("\n\nPlease Insert a valid Deposit Amount!\n\n")
-                else:
-                    cash_deposit(amount)
-            elif response == 4:
-                exit_system()
+os.system('clear')
+
+print(str.capitalize(usernames[n]), ', Welcome to your Savings Account!')
+
+
+# Main menu
+
+def display_balance():
+    """
+    This function will show the user's savings account balance.
+    """
+    global amounts
+    print()
+    print(str.capitalize(usernames[n]), 'You have ',
+                                        amounts[n], '$ on Your Savings Account.\n')
+
+
+def cash_withdraw(withdrawal_amount):
+    """
+    This function will process the withdrawal cash amount
+    and check if the withdrawal amount was greater than the entered amount,
+    It will show a message that the entered amount is not valid.
+    """
+    global amounts
+
+    if withdrawal_amount > amounts[n]:
+        print('\nThe Amount is not AVAILABLE!')
+    else:
+        amounts[n] = amounts[n] - withdrawal_amount
+        print()
+        print()
+        print(f"{withdrawal_amount} Dollars successfully widthdrawn! ")
+        print('Your Remaining Balance is', amounts[n], '$')
+
+
+def cash_deposit(deposit_amount):
+    """
+    This function will process the deposit cash amount and
+    check if the deposit amount was less than 10$..
+    It will show a message that the deposit amount must be greater than 10$
+    """
+    global amounts
+
+    if deposit_amount <= 10:
+        print('\n\n The Amount You Want to Deposit must be more than 10$ ')
+    else:
+        amounts[n] = amounts[n] + deposit_amount
+        print('\n\nYour new Balance is: ', amounts[n], '$')
+
+
+def exit_system():
+    """
+    This function will show a Goodbye message and exit the system.
+    """
+    print("****************************************************************************")
+    print("*                                                                          *")
+    print("*                               THANK YOU, BYE                             *")
+    print("*                                                                          *")
+    print("****************************************************************************")
+    exit()
+
+
+# The while loop will process the user's responses for transaction processing.
+response = None
+amount = None
+
+while True:
+
+    try:
+        response = int(input("""
+            Select From Following Options:
+            1. Check A/C Balance
+            2. Cash Withdraw
+            3. Cash Deposit
+            4. Exit
+            \nType the Number of Your Choices: """))
+
+        if response == 1:
+            display_balance()
+
+        elif response == 2:
+            try:
+                amount = int(input("Enter Withdrawal Amount: "))
+            except ValueError:
+                print("\n\nPlease Insert a valid Withdrawal Amount!\n\n")
             else:
-                raise ValueError('\n\n     Response is not Valid!\n')
-    
-        except ValueError:
-            print('\n\n     Response is not Valid!\n')
+                cash_withdraw(amount)
+
+        elif response == 3:
+            try:
+                amount = int(input("Enter Deposit Amount: "))
+            except ValueError:
+                print("\n\nPlease Insert a valid Deposit Amount!\n\n")
+            else:
+                cash_deposit(amount)
+        elif response == 4:
+            exit_system()
+        else:
+            raise ValueError('\n\n     Response is not Valid!\n')
+
+    except ValueError:
+        print('\n\n     Response is not Valid!\n')
