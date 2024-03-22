@@ -76,7 +76,7 @@ while count <= 3:
 
     os.system('clear')
     
-    print(str.capitalize(usernames[n]), 'Welcome to your Savings Account!')
+    print(str.capitalize(usernames[n]), ', Welcome to your Savings Account!')
 
     # Main menu
 
