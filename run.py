@@ -119,7 +119,7 @@ while count <= 3:
             print('\n\n The Amount You Want to Deposit must be more than 10$')
         else:
             amounts[n] = amounts[n] + deposit_amount
-            print('\n\nYour new Balance is: ', amounts[n], ‚$‘)
+            print('\n\nYour new Balance is: ', amounts[n], '$')
 
     def exit_system():
         """
