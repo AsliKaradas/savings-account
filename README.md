@@ -3,7 +3,7 @@
 
 This Python program facilitates the management of savings accounts, allowing users to check their account balance, make withdrawals (cash withdrawals), and deposits.
 
-![image](/mockup.PNG)
+![image](/mockup.png)
 
 ## USER EXPERIENCE
 
@@ -97,9 +97,45 @@ Upon completion of a transaction, users can exit the system by selecting option 
 ##Libraries
 - **OS** - to clear the system after user login.
 - **String** - To capitalize the usernames.
-- **Time** - To add the sleep() function to make a delay in the terminal for simulating the insert card.
+- **Time** - To add the sleep() function to make a delay in the terminal.
 
 ##Programs
 - **Github** - To store my repository.
 - **python** - To write Saving Account Program.
 - **Heroku** - To deploy the program.
+
+## Testing
+
+- Tested on https://www.online-ide.com/online_python_syntax_checker and fixed some bugs.
+- Tested in my Gitpod local terminal.
+
+## Bugs
+
+### Solved Bugs
+
+![bug](/bug.png)
+![bug](/bug_1.png)
+![bug](/bug_2.png)
+![bug](/bug_3.png)
+
+## Deployment
+
+Steps for deployment:
+1. Click "New" and select "Create new app".
+2. Input a meaningful name for your app and choose the region best suited to your location.
+3. Select "Settings" from the tabs.
+4. Set the buildbacks to python and NodeJS in that order.
+5. Select "Deploy" from the tabs.
+6. Link the Heroku app to the respository.
+7. Select "GitHub - Connect to GitHub" from deployment methods.
+8. Type GitHub repository by name.
+9. Click Deploy Branch to deploy manually. Manually deployed branches will need re-deploying each time the repo is updated.
+10. Click on Deploy.
+11. Click View button to view the deployed site.
+
+### Credits
+
+- [Love Sandwiches](https://github.com/Code-Institute-Solutions/love-sandwiches-p5-sourcecode) 
+- [Source Code Hero](https://sourcecodehero.com/atm-program-in-python-with-source-code/)
+- Youtube Tutorials
+
