@@ -2,7 +2,6 @@
 import time
 import string
 import os
-import pyfiglet
 
 print("\n\nPlease Insert Your Savings Account Card!\n\n")
 time.sleep(2)
