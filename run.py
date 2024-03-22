@@ -77,7 +77,7 @@ while count <= 3:
     os.system('clear')
     
     print('Login Successful, CONTINUE\n')
-    print(str.capitalize(users[n]), 'Welcome to your Savings Account!')
+    print(str.capitalize(usernames[n]), 'Welcome to your Savings Account!')
 
     # Main menu
 
