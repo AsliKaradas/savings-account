@@ -125,8 +125,12 @@ while count <= 3:
         """
         This function will show a Goodbye message and exit the system.
         """
-        goodbye_message = pyfiglet.figlet_format('Thank You, Bye!')
-        print(goodbye_message)
+        print("****************************************************************************")
+        print("*                                                                          *")
+        print("*                               THANK YOU, BYE                             *")
+        print("*                                                                          *")
+        print("****************************************************************************")
+
         exit()
 
     # The while loop will process the user's responses for transaction processing.
