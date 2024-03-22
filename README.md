@@ -1,32 +1,105 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# SAVINGS ACCOUNT PROGRAM
 
-Welcome,
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+This Python program facilitates the management of savings accounts, allowing users to check their account balance, make withdrawals (cash withdrawals), and deposits.
 
-## Reminders
+![image](/mockup.PNG)
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+## USER EXPERIENCE
 
-## Creating the Heroku app
+The user is required to provide an existing username initially, and upon successful matching of the username, the system will prompt for a PIN number. Once the user completes these sign-in procedures, they gain access to all functionalities. The process is straightforward; users can easily verify their account statements. Upon entering the system, users can check their account balance by inputting "1". To initiate a withdrawal, they should enter "2" followed by specifying the desired amount. For depositing money, users need to select "3" and then input the amount they wish to add to their account. Finally, users can exit the system by selecting "4".
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
 
-1. `heroku/python`
-2. `heroku/nodejs`
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## FEATURES
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
 
-Connect your GitHub repository and deploy as normal.
+**WELCOME**
 
-## Constraints
+![messge](/welcome_message.png)
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+______
 
----
+**LOGIN** 
 
-Happy coding!
+ Users can execute transactions by confirming their own account statements; all user inputs are validated, and errors permit  multiple attempts to enter a valid username and password.
+
+**Successful Login**<br>
+**User: savings1**
+
+![login](/correct_username.png)
+
+**INVALID USERNAME**
+
+![login](/invalid_username.png)
+
+**INVALID PASSWORD**<br>
+**User: savings2**
+
+![login](/invalid_pin1.png)
+
+
+
+**FAILED LOGIN**
+
+![login](/invalid_pin1.png)
+
+______
+
+**MENU** 
+
+ Transaction Menu: This functionality enables users to select transactions from the menu according to their preferences.      Users can check their account balance and perform withdrawals or deposits into specified accounts.
+
+![menu](/choose.png)
+
+
+
+**INVALID** 
+
+![login](/invalid_pin1.png)
+
+
+______
+
+**SAVINGS A/C BALANCE**
+
+ This feature allows users to check the amount of balance they have on their account so they can make a valid transaction.
+
+![login](/balance.png)
+
+____________
+
+**CASH WITHDRAW**
+
+ This feature allows users to withdraw the amount they wish. Here also, all user inputs are validated, and errors allow repeat opportunities to input a valid amount. For withdrawal, the user must enter an integer amount. This program does not accept float numbers for cash withdrawal. Furthermore, users cannot withdraw more than their balance.
+
+![deposit](/withdraw.png)
+
+___________________
+
+**CASH DEPOSIT**
+
+ Users can utilize this feature to deposit their desired amount. Here as well, all user inputs are validated, and errors      provide multiple opportunities to input a valid amount. Users can make deposits exceeding ten dollars. This program does     not  accept floating-point numbers for cash deposits.
+
+![deposit](/withdrawal_amount.png)
+
+_______________________
+
+
+**EXIT SYSTEM**
+
+Upon completion of a transaction, users can exit the system by selecting option 4.
+
+![exit](/exit.png)
+
+
+
+##Libraries
+- **OS** - to clear the system after user login.
+- **String** - To capitalize the usernames.
+- **Time** - To add the sleep() function to make a delay in the terminal for simulating the insert card.
+
+##Programs
+- **Github** - To store my repository.
+- **python** - To write Saving Account Program.
+- **Heroku** - To deploy the program.
