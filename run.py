@@ -148,7 +148,7 @@ while True:
     try:
         response = int(input("""
             Select From Following Options:
-            1. Check A/C Balance
+            1. Check Savings A/C Balance
             2. Cash Withdraw
             3. Cash Deposit
             4. Exit
