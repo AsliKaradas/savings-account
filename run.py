@@ -16,8 +16,8 @@ print("*************************************************************************
 
 # Creating user's information for login
 usernames = ['savings1', 'savings2', 'savings3', 'savings4']
-passwords = ['0001', '0002', '0003', '0004']
-amounts = [10000, 20000, 30000, 40000]
+passwords = ['1223', '2222', '4444', '5555']
+amounts = [100, 2000, 30000, 400000]
 count = 0
 
 # Checks users' information 
