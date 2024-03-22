@@ -109,6 +109,11 @@ Upon completion of a transaction, users can exit the system by selecting option 
 - Tested on https://www.online-ide.com/online_python_syntax_checker and fixed some bugs.
 - Tested in my Gitpod local terminal.
 
+![valid](/valid_1.png)
+![valid](/valid_2.png)
+![valid](/valid_3.png)
+![valid](/valid_4.png)
+
 ## Bugs
 
 ### Solved Bugs
@@ -117,6 +122,12 @@ Upon completion of a transaction, users can exit the system by selecting option 
 ![bug](/bug_1.png)
 ![bug](/bug_2.png)
 ![bug](/bug_3.png)
+
+### Remaining Bugs
+    
+- Problems with connecting my Github to Heroku
+- In the beginning i couldn't work with my VSCode, solved it via Gitpod terminal and Github itself.
+- Image Upload didn't work well, so not in an extra folder.
 
 ## Deployment
 
